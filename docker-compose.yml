@@ -1,0 +1,14 @@
+version: '3.7'
+services:
+  python:
+    build:
+      context: python
+    #environment:
+    #  - SENTRY_DSN=1
+    ports:
+      - "5000:5000"
+  statsd:
+    build:
+      context: statsd
+    ports:
+      - "8125:8125"
